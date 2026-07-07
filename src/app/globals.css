@@ -47,3 +47,28 @@ a {
     color-scheme: dark;
   }
 }
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: #00bfff;
+  transform-origin: 0%;
+  z-index: 99999;
+}
+html {
+  scroll-behavior: smooth;
+}
+::selection {
+  background: #00bfff;
+  color: #000;
+}
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}

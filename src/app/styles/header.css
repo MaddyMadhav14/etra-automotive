@@ -1,0 +1,141 @@
+.site-header {
+  width: 100%;
+  padding: 30px 85px;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+.header-logo img {
+  width: 210px;
+  height: auto;
+  display: block;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.header-nav a {
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.header-nav a:hover {
+  color: #00bfff;
+}
+
+.menu-btn {
+  display: none;
+  width: 58px;
+  height: 54px;
+  border: 0;
+  border-radius: 8px;
+  background: #0b0b0b;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.menu-btn span {
+  width: 30px;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+
+  .site-header{
+    position: relative;
+    padding: 28px 26px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-logo img{
+    width:170px;
+  }
+
+  .menu-btn{
+    display:flex;
+    z-index:1001;
+  }
+
+  .header-nav{
+    position:absolute;
+    top:90px;
+    right:20px;
+
+    width:220px;
+    padding:20px;
+
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    align-items:flex-start;
+
+    background:rgba(10,10,10,.88);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;
+    box-shadow:0 10px 40px rgba(0,0,0,.45);
+
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(-10px);
+    transition:all .3s ease;
+
+    z-index:1000;
+  }
+
+  .header-nav.active{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+  }
+
+  .header-nav a{
+    width:100%;
+    padding:10px 0;
+    font-size:14px;
+    color:#fff;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    transition:.3s;
+  }
+
+  .header-nav a:last-child{
+    border-bottom:none;
+  }
+
+  .header-nav a:hover{
+    color:#00bfff;
+    padding-left:8px;
+  }
+}
+.menu-btn span {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-btn.open span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.open span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}

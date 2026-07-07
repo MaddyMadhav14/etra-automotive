@@ -1,66 +1,71 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Header from "./components/Header";
+import FadeUp from "./components/FadeUp";
+import Intro from "./sections/Intro";
+import Explorations from "./sections/Explorations";
+import Studio from "./sections/Studio";
+import Expertise from "./sections/Expertise";
+import ContactCTA from "./sections/ContactCTA";
+import Footer from "./components/Footer";
+import ScrollProgress from "./components/ScrollProgress";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <>
+      <Header />
+
+      <main className="home-page">
+        <section className="home-hero">
+          <video className="hero-video" autoPlay muted loop playsInline>
+            <source src="/videos/herov.mp4" type="video/mp4" />
+          </video>
+
+          <div className="hero-overlay"></div>
+
+          <div className="hero-content">
+            <FadeUp delay={0.1}>
+              <span className="hero-tag">AUTOMOTIVE EXPERIENCE DESIGN</span>
+            </FadeUp>
+
+            <FadeUp delay={0.25}>
+              <h1>
+                Prototyping Every
+                <br />
+                Dimension of Transit
+              </h1>
+            </FadeUp>
+
+            <FadeUp delay={0.4}>
+              <p className="hero-description">
+                Designing next-generation HMI, CGI, digital experiences,
+                configurators and mobility platforms for the future.
+              </p>
+            </FadeUp>
+
+            <FadeUp delay={0.55}>
+              <div className="hero-buttons">
+                <button className="primary-btn">Explore Studio</button>
+                <button className="secondary-btn">View Projects</button>
+              </div>
+            </FadeUp>
+            <FadeUp delay={0.7}>
+  <div className="scroll-indicator">
+    <span>SCROLL</span>
+
+    <div className="scroll-mouse">
+      <div className="scroll-dot"></div>
     </div>
+  </div>
+</FadeUp>
+          </div>
+        </section>
+        <ScrollProgress />
+        <Intro />
+        <Explorations />
+        <Studio />
+        <Expertise />
+        <ContactCTA />
+        <Footer />
+      </main>
+    </>
   );
 }

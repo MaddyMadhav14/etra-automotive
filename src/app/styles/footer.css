@@ -1,0 +1,98 @@
+.footer {
+  padding: 120px 85px 40px;
+  background: #000;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer::before {
+  content: "ETRA";
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  font-size: 22vw;
+  font-weight: 800;
+  color: rgba(255,255,255,0.025);
+  pointer-events: none;
+}
+
+.footer-top {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 90px;
+}
+
+.footer-brand h2 {
+  margin: 0 0 28px;
+  font-size: clamp(48px, 7vw, 110px);
+  color: #00bfff;
+}
+
+.footer-brand p {
+  max-width: 420px;
+  color: rgba(255,255,255,0.68);
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+}
+
+.footer-links h4 {
+  margin: 0 0 28px;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 13px;
+}
+
+.footer-links a,
+.footer-links p {
+  display: block;
+  margin: 0 0 16px;
+  color: rgba(255,255,255,0.78);
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #00bfff;
+  transform: translateX(8px);
+}
+
+.footer-bottom {
+  position: relative;
+  z-index: 2;
+  margin-top: 100px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-bottom p {
+  color: rgba(255,255,255,0.45);
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 90px 28px 35px;
+  }
+
+  .footer-top,
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .footer::before {
+    font-size: 34vw;
+  }
+}
