@@ -1,0 +1,453 @@
+.expertise-page {
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.expertise-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 7vw 90px;
+  overflow: hidden;
+}
+
+.expertise-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/expertise-hero.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(1.06);
+  z-index: 0;
+filter: brightness(0.82) contrast(1.08) saturate(1.05);
+   
+}
+
+.expertise-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+ background:
+  linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.10),
+    rgba(0, 0, 0, 0.68)
+  ),
+  linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.12)
+  );
+}
+
+.expertise-content {
+  position: relative;
+  z-index: 2;
+}
+
+.expertise-content span {
+  color: #00bfff;
+  text-transform: uppercase;
+  letter-spacing: .42em;
+  font-size: 13px;
+}
+
+.expertise-content h1 {
+  font-size: clamp(58px, 10vw, 150px);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  line-height: .9;
+  margin: 20px 0 18px;
+}
+
+.expertise-content h2 {
+  font-size: clamp(32px, 5vw, 78px);
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0;
+}
+
+.expertise-intro {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 120px 7vw 90px;
+}
+
+.intro-line {
+  width: 86px;
+  height: 3px;
+  background: #00bfff;
+  margin-bottom: 38px;
+}
+
+.expertise-intro p {
+  max-width: 1050px;
+  font-size: clamp(24px, 3vw, 46px);
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  font-weight: 300;
+}
+
+@keyframes expertiseFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(34px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .expertise-hero {
+    min-height: 88vh;
+    padding: 0 24px 70px;
+  }
+
+  .expertise-content h1 {
+    letter-spacing: .06em;
+  }
+
+  .expertise-intro {
+    padding: 80px 24px 60px;
+  }
+
+  .expertise-intro p {
+    font-size: 28px;
+  }
+}
+.expertise-services {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 7vw 130px;
+  border-top: 1px solid rgba(255,255,255,.05);
+}
+
+.section-kicker {
+  color: #00bfff;
+  text-transform: uppercase;
+  letter-spacing: .34em;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.expertise-services h2 {
+  max-width: 900px;
+  font-size: clamp(36px, 5vw, 82px);
+  line-height: .95;
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  margin: 0 0 65px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.service-card {
+  min-height: 330px;
+  padding: 38px 30px;
+  background: linear-gradient(145deg, #141414, #070707);
+  border: 1px solid rgba(255,255,255,.08);
+  transition: .45s ease;
+}
+
+.service-card span {
+  display: block;
+  color: #00bfff;
+  font-size: 46px;
+  font-weight: 200;
+  margin-bottom: 28px;
+}
+
+.service-card h3 {
+  text-transform: uppercase;
+  font-size: 25px;
+  line-height: 1.1;
+  font-weight: 300;
+  margin: 0 0 20px;
+}
+
+.service-card p {
+  color: #bdbdbd;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(0,191,255,.55);
+  box-shadow: 0 28px 80px rgba(0,191,255,.14);
+}
+
+@media (max-width: 1000px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .expertise-services {
+    padding: 20px 24px 90px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.expertise-platforms {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 7vw 130px;
+  border-top: 1px solid rgba(255,255,255,.05);
+}
+
+.expertise-platforms h2 {
+  max-width: 900px;
+  font-size: clamp(36px, 5vw, 82px);
+  line-height: .95;
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  margin: 0 0 55px;
+}
+
+.platform-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.platform-pill {
+  padding: 18px 24px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.04);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: #fff;
+  font-size: 16px;
+  transition: .35s ease;
+}
+
+.platform-pill:hover {
+  border-color: #00bfff;
+  color: #00bfff;
+  transform: translateY(-4px);
+}
+
+@media (max-width: 600px) {
+  .expertise-platforms {
+    padding: 20px 24px 90px;
+  }
+
+  .platform-pill {
+    width: 100%;
+  }
+}
+.expertise-industry {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 7vw 130px;
+  border-top: 1px solid rgba(255,255,255,.05);
+}
+
+.expertise-industry h2 {
+  max-width: 900px;
+  font-size: clamp(36px, 5vw, 82px);
+  line-height: .95;
+  font-weight: 300;
+  margin: 0 0 60px;
+}
+
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.industry-card {
+  padding: 40px 32px;
+  min-height: 280px;
+  background: linear-gradient(145deg, #141414, #080808);
+  border: 1px solid rgba(255,255,255,.08);
+  transition: .4s ease;
+}
+
+.industry-card h3 {
+  font-size: 28px;
+  font-weight: 300;
+  margin-bottom: 22px;
+}
+
+.industry-card p {
+  color: #bdbdbd;
+  line-height: 1.8;
+}
+
+.industry-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(0,191,255,.5);
+  box-shadow: 0 25px 70px rgba(0,191,255,.15);
+}
+
+@media (max-width: 900px) {
+  .industry-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .expertise-industry {
+    padding: 20px 24px 90px;
+  }
+}
+.expertise-metrics {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 7vw 130px;
+  border-top: 1px solid rgba(255,255,255,.05);
+}
+
+.expertise-metrics h2 {
+  max-width: 900px;
+  font-size: clamp(36px, 5vw, 82px);
+  line-height: .95;
+  font-weight: 300;
+  margin: 0 0 60px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.metric-card {
+  padding: 38px 28px;
+  min-height: 300px;
+  background: linear-gradient(145deg, #141414, #070707);
+  border: 1px solid rgba(255,255,255,.08);
+  transition: .45s ease;
+}
+
+.metric-card span {
+  display: block;
+  color: #00bfff;
+  font-size: 52px;
+  font-weight: 200;
+  margin-bottom: 24px;
+}
+
+.metric-card h3 {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 18px;
+}
+
+.metric-card p {
+  color: #bdbdbd;
+  line-height: 1.8;
+}
+
+.metric-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(0,191,255,.55);
+  box-shadow: 0 28px 80px rgba(0,191,255,.14);
+}
+
+@media (max-width: 1000px) {
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .expertise-metrics {
+    padding: 20px 24px 90px;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.expertise-cta {
+  margin: 0 7vw 80px;
+  padding: 120px 7vw;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  background:
+    linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.88)),
+    url("/images/expertise-hero.webp");
+
+  background-size: cover;
+  background-position: center;
+
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.expertise-cta p {
+  color: #00bfff;
+  text-transform: uppercase;
+  letter-spacing: .35em;
+  font-size: 13px;
+}
+
+.expertise-cta h2 {
+  max-width: 900px;
+  margin: 24px auto 42px;
+
+  font-size: clamp(38px,5vw,86px);
+  line-height: .95;
+  font-weight: 300;
+}
+
+.expertise-cta a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 18px 38px;
+
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-size: 13px;
+
+  border: 1px solid rgba(255,255,255,.18);
+
+  background: rgba(255,255,255,.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  transition: .4s ease;
+}
+
+.expertise-cta a:hover {
+  transform: translateY(-4px);
+  background: #00bfff;
+  color: #000;
+  border-color: #00bfff;
+  box-shadow: 0 20px 45px rgba(0,191,255,.35);
+}
+
+@media (max-width:600px){
+
+.expertise-cta{
+margin:0 24px 60px;
+padding:80px 24px;
+}
+
+}
