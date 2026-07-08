@@ -2,9 +2,11 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="site-header">
@@ -12,12 +14,12 @@ export default function Header() {
         <img src="/images/etra-logo.png" alt="ETRA Automotive" />
       </Link>
 
-      <nav className={open ? "header-nav active" : "header-nav"}>
-        <Link href="/explorations">EXPLORATIONS</Link>
-        <Link href="/studio">STUDIO</Link>
-        <Link href="/expertise">EXPERTISE</Link>
-        <Link href="/contact">CONTACT</Link>
-      </nav>
+    <nav className={open ? "header-nav active" : "header-nav"}>
+  <Link className={pathname === "/explorations" ? "nav-active" : ""} href="/explorations">EXPLORATIONS</Link>
+  <Link className={pathname === "/studio" ? "nav-active" : ""} href="/studio">STUDIO</Link>
+  <Link className={pathname === "/expertise" ? "nav-active" : ""} href="/expertise">EXPERTISE</Link>
+  <Link className={pathname === "/contact" ? "nav-active" : ""} href="/contact">CONTACT</Link>
+</nav>
 
     <button
          className={open ? "menu-btn open" : "menu-btn"}
