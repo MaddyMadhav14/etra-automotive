@@ -1,0 +1,338 @@
+.contact-page {
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.contact-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 7vw 90px;
+  overflow: hidden;
+}
+
+.contact-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/expertise-hero.webp");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.82) contrast(1.08) saturate(1.05);
+  transform: scale(1.06);
+  animation: heroZoom 18s ease-in-out infinite alternate;
+}
+@keyframes heroZoom{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.08);
+    }
+}
+
+.contact-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,.10), rgba(0,0,0,.72)),
+    linear-gradient(to right, rgba(0,0,0,.55), rgba(0,0,0,.12));
+}
+
+.contact-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  animation: contactFadeUp 1s ease forwards;
+}
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.contact-content span {
+  color: #00bfff;
+  text-transform: uppercase;
+  letter-spacing: .42em;
+  font-size: 13px;
+}
+
+.contact-content h1 {
+  font-size: clamp(58px, 10vw, 150px);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  line-height: .9;
+  margin: 20px 0 18px;
+}
+
+.contact-content h2 {
+  font-size: clamp(32px, 5vw, 78px);
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0;
+}
+
+.contact-intro {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 120px 7vw 90px;
+}
+
+.intro-line {
+  width: 86px;
+  height: 3px;
+  background: #00bfff;
+  margin-bottom: 38px;
+}
+
+.contact-intro-main {
+  max-width: 1000px;
+  font-size: clamp(28px, 4vw, 58px);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  font-weight: 300;
+  margin: 0;
+}
+
+.contact-intro-note {
+  max-width: 760px;
+  margin-top: 36px;
+  color: #bdbdbd;
+  font-size: 18px;
+  line-height: 1.8;
+  font-style: italic;
+}
+
+@keyframes contactFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(34px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero {
+    min-height: 88vh;
+    padding: 0 24px 70px;
+  }
+
+  .contact-content h1 {
+    letter-spacing: .06em;
+  }
+
+  .contact-intro {
+    padding: 80px 24px 60px;
+  }
+
+  .contact-intro-main {
+    font-size: 32px;
+  }
+
+  .contact-intro-note {
+    font-size: 15px;
+  }
+}
+.expect-section{
+    max-width:1200px;
+    margin:0 auto;
+    padding:40px 7vw 100px;
+}
+
+.expect-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+    margin-top:40px;
+}
+
+.expect-card{
+    background:#111;
+    border-left:4px solid #00bfff;
+    padding:40px 30px;
+    transition:.4s ease;
+    border:1px solid rgba(255,255,255,.06);
+}
+
+.expect-card:hover{
+    transform:translateY(-10px);
+    border-color:#00bfff;
+    box-shadow:0 20px 40px rgba(0,191,255,.18);
+}
+
+.expect-card h3{
+    font-size:34px;
+    margin-bottom:20px;
+}
+
+.expect-card p{
+    color:#bdbdbd;
+    line-height:1.8;
+}
+
+@media(max-width:900px){
+    .expect-grid{
+        grid-template-columns:1fr;
+    }
+}
+.contact-form-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 7vw 120px;
+}
+
+.contact-form {
+  margin-top: 40px;
+  display: grid;
+  gap: 18px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  background: #0d0d0d;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.12);
+  padding: 20px 18px;
+  font-size: 16px;
+  outline: none;
+  transition: .35s ease;
+}
+
+.contact-form textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: #00bfff;
+  box-shadow: 0 0 0 3px rgba(0,191,255,.12);
+}
+
+.contact-form button {
+  width: fit-content;
+  padding: 18px 38px;
+  background: #00bfff;
+  color: #000;
+  border: 0;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  cursor: pointer;
+  transition: .35s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(0,191,255,.35);
+}
+
+@media (max-width: 700px) {
+  .contact-form-section {
+    padding: 20px 24px 90px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+.contact-intro,
+.expect-section,
+.contact-form-section {
+  animation: contactFadeUp 0.9s ease both;
+  border-top: 1px solid rgba(255,255,255,.05);
+}
+
+.contact-form input:hover,
+.contact-form select:hover,
+.contact-form textarea:hover {
+  border-color: rgba(0,191,255,.45);
+}
+
+.expect-card,
+.contact-form button {
+  will-change: transform;
+}
+/* contact final effects */
+
+.contact-hero-bg {
+  animation: contactHeroZoom 18s ease-in-out infinite alternate;
+}
+
+@keyframes contactHeroZoom {
+  from {
+    transform: scale(1.04);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.contact-content {
+  animation: contactTextFade 1s ease forwards;
+}
+
+@keyframes contactTextFade {
+  from {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.expect-card {
+  transition: 0.45s ease;
+  will-change: transform;
+}
+
+.expect-card:hover {
+  transform: translateY(-10px);
+  border-color: #00bfff;
+  box-shadow: 0 24px 70px rgba(0, 191, 255, 0.16);
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  transition: 0.35s ease;
+}
+
+.contact-form input:hover,
+.contact-form select:hover,
+.contact-form textarea:hover {
+  border-color: rgba(0, 191, 255, 0.55);
+}
+
+.contact-form button {
+  position: relative;
+  overflow: hidden;
+  transition: 0.35s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(0, 191, 255, 0.35);
+}
