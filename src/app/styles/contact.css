@@ -336,3 +336,14 @@
   transform: translateY(-4px);
   box-shadow: 0 20px 45px rgba(0, 191, 255, 0.35);
 }
+.form-success {
+  margin-top: 20px;
+  color: #00d26a;
+  text-align: center;
+}
+
+.form-error {
+  margin-top: 20px;
+  color: #ff4d4f;
+  text-align: center;
+}

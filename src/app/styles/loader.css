@@ -1,0 +1,40 @@
+.page-loader {
+  min-height: 100vh;
+  background: #050505;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+}
+
+.loader-mark {
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 0.45em;
+  font-weight: 600;
+}
+
+.loader-line {
+  width: 160px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #fff, transparent);
+  animation: loaderMove 1.2s infinite ease-in-out;
+}
+
+@keyframes loaderMove {
+  0% {
+    transform: scaleX(0);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scaleX(0);
+    opacity: 0.4;
+  }
+}
