@@ -147,3 +147,15 @@ video {
   background: #00bfff;
   color: #000;
 }
+html {
+  overflow-y: auto;
+}
+
+body {
+  overflow-y: visible;
+}
+
+#__next,
+main {
+  overflow-x: hidden;
+}

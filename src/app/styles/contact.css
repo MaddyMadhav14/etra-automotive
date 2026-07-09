@@ -6,7 +6,7 @@
 
 .contact-hero {
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh - 78px);
   display: flex;
   align-items: flex-end;
   padding: 0 7vw 90px;
@@ -124,7 +124,7 @@
 
 @media (max-width: 768px) {
   .contact-hero {
-    min-height: 88vh;
+     min-height: calc(100vh - 82px);
     padding: 0 24px 70px;
   }
 
