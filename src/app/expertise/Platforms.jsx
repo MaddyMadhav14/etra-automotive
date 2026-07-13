@@ -2,8 +2,6 @@ const platforms = [
   "Unreal Engine",
   "Rive",
   "Figma",
-  "React / Next.js",
-  "WebGL",
   "3D Configurators",
   "HMI Systems",
   "Digital Twin Pipeline",
