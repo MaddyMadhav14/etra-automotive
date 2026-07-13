@@ -38,8 +38,9 @@ export default function Footer() {
           <div>
             <h4>Contact</h4>
 
-            <p>hello@etraautomotive.com</p>
-            <p>India</p>
+            <p>INDIA – Chennai
+               Plot No.51, Dr. Ramasamy Salai, K K Nagar, Chennai – 600 0782</p>
+            <p>Sale Office Address: 501, rue des arbrisseaux, Pincourt, Quebec J7W 0M1</p>
           </div>
 
         </div>
