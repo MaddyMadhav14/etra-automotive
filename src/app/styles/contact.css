@@ -1,7 +1,10 @@
 .contact-page {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
   background: #000;
   color: #fff;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .contact-hero {
