@@ -30,7 +30,7 @@ export default function Technologies() {
       </p>
 
       <h2>
-        engineering tomorrow's digital mobility.
+        engineering tomorrow&apos;s digital mobility.
       </h2>
 
       <div className="technology-grid">

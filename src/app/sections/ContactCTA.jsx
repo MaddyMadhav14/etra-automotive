@@ -7,7 +7,7 @@ export default function ContactCTA() {
       </span>
 
       <h2>
-        Let's Build
+        Let&apos;s Build
         <br />
         The Future
         <br />
@@ -16,7 +16,7 @@ export default function ContactCTA() {
 
       <p>
         Ready to transform your automotive vision into an immersive digital
-        experience? Let's create something exceptional together.
+        experience? Let&apos;s create something exceptional together.
       </p>
 
       <button className="cta-button">
